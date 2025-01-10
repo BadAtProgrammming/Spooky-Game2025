@@ -5,8 +5,10 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
 
-    bool interacting;
-    bool hasItem;
+    public GameObject interactable;
+    public GameObject objectToDestroy;
+
+    public bool hasItem;
 
 
     // Start is called before the first frame update
@@ -18,28 +20,19 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && interacting == true)
+        if (hasItem == false)
         {
-            Interact();
+            interactable.SetActive(false);
         }
+
+        if (hasItem == true)
+        {
+            interactable.SetActive(true);
+            Destroy(objectToDestroy);
+        }
+
+       
     }
 	
-    private void Interact()
-    {
-        Destroy(gameObject);
-        hasItem = true;
-    }
-	
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        interacting = true;
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        interacting = false;
-    }
+  
 }
