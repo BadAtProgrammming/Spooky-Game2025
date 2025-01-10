@@ -18,8 +18,8 @@ public class TextHandler : MonoBehaviour
     public GameObject backgroundGO;
 
     //reference to animator to change animation based on dialouge.
-    //public Animator shotAnim;
-    //public Animator miloAnim;
+    public Animator shotAnim;
+    public Animator miloAnim;
 
     //reference to camera to change camera based on dialouge.
     public Camera cam;
@@ -116,31 +116,39 @@ public class TextHandler : MonoBehaviour
             else
                 cam.orthographicSize = 5;
 
-            // if (text.ToLower().Contains("(shotshocked)")){ text = text.Remove(text.Length - 13);shotAnim.SetBool("Shocked", true);}else{shotAnim.SetBool("Shocked", false);}
+            if (text.ToLower().Contains("(shotshocked)"))
+            {
+                text = text.Remove(text.Length - 13);
+                shotAnim.SetBool("Shocked", true);
+            }
+            else
+            {
+                shotAnim.SetBool("Shocked", false);
+            }
 
-            //if (text.ToLower().Contains("(shotstare)"))
-            //{
-            //text = text.Remove(text.Length - 11);
-            //shotAnim.SetBool("Staring", true);
-            // }
-            //else
-            //shotAnim.SetBool("Staring", false);
+            if (text.ToLower().Contains("(shotstare)"))
+            {
+                text = text.Remove(text.Length - 11);
+                shotAnim.SetBool("Staring", true);
+            }
+            else
+                shotAnim.SetBool("Staring", false);
 
-            //if (text.ToLower().Contains("(shottalk)"))
-            //{
-            //text = text.Remove(text.Length - 10);
-            // shotAnim.SetBool("Talking", true);
-            //}
-            //else
-            //shotAnim.SetBool("Talking", false);
+            if (text.ToLower().Contains("(shottalk)"))
+            {
+                text = text.Remove(text.Length - 10);
+                shotAnim.SetBool("Talking", true);
+            }
+            else
+                shotAnim.SetBool("Talking", false);
 
-            //if (text.ToLower().Contains("(milotalk)"))
-            //{
-            // text = text.Remove(text.Length - 10);
-            //miloAnim.SetBool("Talking", true);
-            //}
-            //else
-            // miloAnim.SetBool("Talking", false);
+            if (text.ToLower().Contains("(milotalk)"))
+            {
+                text = text.Remove(text.Length - 10);
+                miloAnim.SetBool("Talking", true);
+            }
+            else
+                miloAnim.SetBool("Talking", false);
 
             //sets the text of the variable called text to be equal to the local variable text (i made it confusing on purpose sorry lmao)
             this.text.text = text;
@@ -151,8 +159,8 @@ public class TextHandler : MonoBehaviour
             currentDialouge = 0;
             textGO.SetActive(false);
             backgroundGO.SetActive(false);
-            // shotAnim.SetBool("Talking", false);
-            //miloAnim.SetBool("Talking", false);
+            shotAnim.SetBool("Talking", false);
+            miloAnim.SetBool("Talking", false);
         }
     }
 }
