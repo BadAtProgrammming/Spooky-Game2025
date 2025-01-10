@@ -27,10 +27,8 @@ public class PlayerMovement : TextHandler
 
     void FixedUpdate()
     {
-       
 
-        rb.velocity = new Vector2(rb.velocity.x, vert * 7);
+        rb.velocity = new Vector2(horz * 7 , vert * 7);
         
-        rb.velocity = new Vector2(horz * 7, rb.velocity.y);
     }
 }
