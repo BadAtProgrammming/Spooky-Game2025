@@ -6,10 +6,7 @@ public class PlayerMovement : TextHandler
 {
 
     Rigidbody2D rb;
-    float timesTalked;
-    TextHandler == th;
-    float canTalk;
-    readonly float currentDialouge;
+    
     float horz;
     float vert;
 
