@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,7 @@ public class PlayerMovement : TextHandler
 
     Rigidbody2D rb;
     float timesTalked;
-    float th;
+    TextHandler == th;
     float canTalk;
     readonly float currentDialouge;
     float horz;
@@ -48,4 +48,4 @@ public class PlayerMovement : TextHandler
         
         rb.velocity = new Vector2(horz * 7, rb.velocity.y);
     }
-}
+}*/
