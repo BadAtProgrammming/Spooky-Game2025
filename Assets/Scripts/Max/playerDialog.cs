@@ -2,29 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : TextHandler
+public class playerDialog : TextHandler
 {
-
-    Rigidbody2D rb;
-    float timesTalked;
-    float th;
-    float canTalk;
-    readonly float currentDialouge;
-    float horz;
-    float vert;
-
+    float
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        horz = Input.GetAxis("Horizontal");
-        vert = Input.GetAxis("Vertical");
-
         //th is a reference to the textHandler script
         #region Talking
         if (canTalk && th.currentDialouge == 0)
@@ -38,14 +27,5 @@ public class PlayerMovement : TextHandler
             }
         }
         #endregion
-    }
-
-    void FixedUpdate()
-    {
-       
-
-        rb.velocity = new Vector2(rb.velocity.x, vert * 7);
-        
-        rb.velocity = new Vector2(horz * 7, rb.velocity.y);
     }
 }
