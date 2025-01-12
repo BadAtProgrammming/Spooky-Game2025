@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : TextHandler
 {
 
     Rigidbody2D rb;
-
+    
     float horz;
     float vert;
 
@@ -21,14 +21,14 @@ public class PlayerMovement : MonoBehaviour
     {
         horz = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
+
+       
     }
 
     void FixedUpdate()
     {
-       
 
-        rb.velocity = new Vector2(rb.velocity.x, vert * 7);
+        rb.velocity = new Vector2(horz * 7 , vert * 7);
         
-        rb.velocity = new Vector2(horz * 7, rb.velocity.y);
     }
 }
