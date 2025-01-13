@@ -46,6 +46,9 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    
+    public void BackToGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 }
