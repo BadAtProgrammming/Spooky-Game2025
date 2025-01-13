@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] Transform tP;
+    public Transform tP;
 }
