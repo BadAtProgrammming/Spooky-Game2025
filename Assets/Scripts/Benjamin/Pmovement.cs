@@ -5,16 +5,15 @@ using UnityEngine.InputSystem;
 
 public class Pmovement : MonoBehaviour
 {
-    PlayerInputActions _input;
-    [SerializeField] Framework fw;
+    [SerializeField] Controls controls;
+    Framework fw;
     // Start is called before the first frame update
     void Start()
     {
         fw = GetComponent<Framework>();
-        _input = new PlayerInputActions();
-        _input.PlayerGameplay.Enable();
-        _input.PlayerGameplay.Move.performed += MovePerformed;
-        _input.PlayerGameplay.Move.canceled += MoveCanceled;
+        controls._input.PlayerGameplay.Enable();
+        controls._input.PlayerGameplay.Move.performed += MovePerformed;
+        controls._input.PlayerGameplay.Move.canceled += MoveCanceled;
     }
 
     void MovePerformed(InputAction.CallbackContext context)
@@ -30,7 +29,7 @@ public class Pmovement : MonoBehaviour
 
     private void Update()
     {
-        if (fw.speed < fw.maxspeed & _input.PlayerGameplay.Move.ReadValue<Vector2>() != Vector2.zero)
+        if (fw.speed < fw.maxspeed & controls._input.PlayerGameplay.Move.ReadValue<Vector2>() != Vector2.zero)
         {
             fw.speed += fw.acceleration * Time.deltaTime;
         }
@@ -39,8 +38,8 @@ public class Pmovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(_input.PlayerGameplay.Move.ReadValue<Vector2>());
-        fw.rb.velocity = _input.PlayerGameplay.Move.ReadValue<Vector2>() * fw.speed * Time.deltaTime;
+        Debug.Log(controls._input.PlayerGameplay.Move.ReadValue<Vector2>());
+        fw.rb.velocity = controls._input.PlayerGameplay.Move.ReadValue<Vector2>() * fw.speed * Time.deltaTime;
     }
 
 }

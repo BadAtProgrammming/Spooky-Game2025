@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
+    [SerializeField] Camera CM;
+    Collider2D playercoll;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playercoll = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.gameObject.tag == "CameraSpace")
+        {
+            CM.transform.position = collision.gameObject.transform.position;
+        }
     }
+
+    // big squares, uses colliders to send camera to the squares, if interact with door send camera to a rooms square
+
 }

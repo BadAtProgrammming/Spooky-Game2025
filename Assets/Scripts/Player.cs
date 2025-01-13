@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 print("Cum");
+                door.Open = true;
                 transform.position = door.tP.transform.position;
             }
         }
