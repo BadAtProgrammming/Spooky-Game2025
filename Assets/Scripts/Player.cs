@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
             Door door = collision.gameObject.GetComponent<Door>();
             if (Input.GetKeyDown(KeyCode.E))
             {
+                door.Open = true;
                 transform.position = door.tP.transform.position;
             }
         }
