@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class PauseScreen : MonoBehaviour
 {
@@ -14,6 +14,8 @@ public class PauseScreen : MonoBehaviour
     void Start()
     {
         pauseScreen.SetActive(false);
+
+        
     }
 
     // Update is called once per frame
@@ -42,6 +44,11 @@ public class PauseScreen : MonoBehaviour
         pauseScreen.SetActive(false);
         pauseOn = false;
         Time.timeScale = 1;
+    }
+
+    public void BackToGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
