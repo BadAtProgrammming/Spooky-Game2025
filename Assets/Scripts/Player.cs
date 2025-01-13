@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    GameObject door;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +15,15 @@ public class Player : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Door")
         {
-           Door door = collision.gameObject.GetComponent<Door>();
+            Door door = collision.gameObject.GetComponent<Door>();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                transform.position = door.tP.transform.position;
+            }
         }
     }
 }
