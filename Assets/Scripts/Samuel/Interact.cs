@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
-    public bool interacting;
+    
 
     public GameObject Interactable;
 
@@ -21,11 +21,7 @@ public class Interact : MonoBehaviour
     {
         Interactable.GetComponent<Interactable>().hasItem = hasItem;
 
-        if (Input.GetKeyDown(KeyCode.E) && interacting == true)
-        {
-            Interacting();
-           
-        }
+        
     }
 
     private void Interacting()
@@ -35,15 +31,16 @@ public class Interact : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
 
-        interacting = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Interacting();
+
+        }
 
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        interacting = false;
-    }
+  
 }
