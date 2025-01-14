@@ -1,15 +1,20 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class playerDialog : TextHandler
-  {
-  float
+{
+    bool canTalk;
+    TextHandler th;
+    int timesTalked;
     // Start is called before the first frame update
     void Start()
     {
-      
+
     }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -28,4 +33,21 @@ public class playerDialog : TextHandler
         }
         #endregion
     }
-}*/
+    private void OnTriggerEnter(Collider2D other)
+    {
+        if (other.CompareTag("GhostBox"))
+        {
+            //talkInstructionText.SetActive(true);
+            canTalk = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider2D other)
+    {
+        if (other.CompareTag("GhostBox"))
+        {
+           // talkInstructionText.SetActive(false);
+            canTalk = false;
+        }
+    }
+}

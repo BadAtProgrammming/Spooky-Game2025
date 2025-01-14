@@ -116,7 +116,7 @@ public class TextHandler : MonoBehaviour
             else
                 cam.orthographicSize = 5;
 
-            if (text.ToLower().Contains("(shotshocked)"))
+           /* if (text.ToLower().Contains("(shotshocked)"))
             {
                 text = text.Remove(text.Length - 13);
                 shotAnim.SetBool("Shocked", true);
@@ -160,7 +160,7 @@ public class TextHandler : MonoBehaviour
             textGO.SetActive(false);
             backgroundGO.SetActive(false);
             shotAnim.SetBool("Talking", false);
-            miloAnim.SetBool("Talking", false);
+            miloAnim.SetBool("Talking", false);*/
         }
     }
 }
