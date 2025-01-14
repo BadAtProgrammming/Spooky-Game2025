@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 
 public class Pmovement : MonoBehaviour
 {
-    [SerializeField] Controls controls;
+    private Controls controls;
     Framework fw;
     // Start is called before the first frame update
     void Start()
     {
+        controls = GetComponent<Controls>();
         fw = GetComponent<Framework>();
         controls._input.PlayerGameplay.Enable();
         controls._input.PlayerGameplay.Move.performed += MovePerformed;

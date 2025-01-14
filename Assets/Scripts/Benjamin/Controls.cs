@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Controls : MonoBehaviour
 {
-    public PlayerInputActions _input;
+    public PlayerActions _input;
     private void Start()
     {
-        _input = new PlayerInputActions();
+        _input = new PlayerActions();
     }
 }
