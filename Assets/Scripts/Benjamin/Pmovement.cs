@@ -5,12 +5,12 @@ using UnityEngine.InputSystem;
 
 public class Pmovement : MonoBehaviour
 {
-    private Controls controls;
+    public PlayerActions _input;
     Framework fw;
     // Start is called before the first frame update
     void Start()
     {
-        PlayerActions _input = new PlayerActions();
+        _input = new PlayerActions();
         fw = GetComponent<Framework>();
         _input.PlayerGameplay.Enable();
         _input.PlayerGameplay.Move.performed += MovePerformed;
@@ -30,7 +30,7 @@ public class Pmovement : MonoBehaviour
 
     private void Update()
     {
-        if (fw.speed < fw.maxspeed & controls._input.PlayerGameplay.Move.ReadValue<Vector2>() != Vector2.zero)
+        if (fw.speed < fw.maxspeed & _input.PlayerGameplay.Move.ReadValue<Vector2>() != Vector2.zero)
         {
             fw.speed += fw.acceleration * Time.deltaTime;
         }
@@ -39,8 +39,8 @@ public class Pmovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(controls._input.PlayerGameplay.Move.ReadValue<Vector2>());
-        fw.rb.velocity = controls._input.PlayerGameplay.Move.ReadValue<Vector2>() * fw.speed * Time.deltaTime;
+        Debug.Log(_input.PlayerGameplay.Move.ReadValue<Vector2>());
+        fw.rb.velocity = _input.PlayerGameplay.Move.ReadValue<Vector2>() * fw.speed * Time.deltaTime;
     }
 
 }
