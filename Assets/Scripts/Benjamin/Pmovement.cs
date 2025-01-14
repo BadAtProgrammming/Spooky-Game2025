@@ -10,11 +10,11 @@ public class Pmovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controls = GetComponent<Controls>();
+        PlayerActions _input = new PlayerActions();
         fw = GetComponent<Framework>();
-        controls._input.PlayerGameplay.Enable();
-        controls._input.PlayerGameplay.Move.performed += MovePerformed;
-        controls._input.PlayerGameplay.Move.canceled += MoveCanceled;
+        _input.PlayerGameplay.Enable();
+        _input.PlayerGameplay.Move.performed += MovePerformed;
+        _input.PlayerGameplay.Move.canceled += MoveCanceled;
     }
 
     void MovePerformed(InputAction.CallbackContext context)
