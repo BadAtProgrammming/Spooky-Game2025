@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class TextHandler : MonoBehaviour
 {
+    
     //the actual text object.
     public TextMeshProUGUI text;
 
@@ -86,7 +87,7 @@ public class TextHandler : MonoBehaviour
         sr[dialougeNum] = new StreamReader($"Dialouge{dialougeNum}.txt");
         currentDialouge = dialougeNum;
         textGO.SetActive(true);
-        backgroundGO.SetActive(true);
+        //backgroundGO.SetActive(true);
         DisplayNextLine();
     }
 
@@ -108,59 +109,65 @@ public class TextHandler : MonoBehaviour
             //It is important that the written dialouge has these in order
             //at the end, as if it has camerazoom, but not at the end, it is
             //still going to remove the last 12 characters, breaking the text.
-            if (text.ToLower().Contains("(camerazoom)"))
+            /*if (text.ToLower().Contains("(camerazoom)"))
             {
                 cam.orthographicSize = 2;
                 text = text.Remove(text.Length - 12);
             }
             else
+            {
                 cam.orthographicSize = 5;
+            }*/
 
-           /* if (text.ToLower().Contains("(shotshocked)"))
-            {
-                text = text.Remove(text.Length - 13);
-                shotAnim.SetBool("Shocked", true);
-            }
-            else
-            {
-                shotAnim.SetBool("Shocked", false);
-            }
+            /* if (text.ToLower().Contains("(shotshocked)"))
+             {
+                 text = text.Remove(text.Length - 13);
+                 shotAnim.SetBool("Shocked", true);
+             }
+             else
+             {
+                 shotAnim.SetBool("Shocked", false);
+             }
 
-            if (text.ToLower().Contains("(shotstare)"))
-            {
-                text = text.Remove(text.Length - 11);
-                shotAnim.SetBool("Staring", true);
-            }
-            else
-                shotAnim.SetBool("Staring", false);
+             if (text.ToLower().Contains("(shotstare)"))
+             {
+                 text = text.Remove(text.Length - 11);
+                 shotAnim.SetBool("Staring", true);
+             }
+             else
+                 shotAnim.SetBool("Staring", false);
 
-            if (text.ToLower().Contains("(shottalk)"))
-            {
-                text = text.Remove(text.Length - 10);
-                shotAnim.SetBool("Talking", true);
-            }
-            else
-                shotAnim.SetBool("Talking", false);
+             if (text.ToLower().Contains("(shottalk)"))
+             {
+                 text = text.Remove(text.Length - 10);
+                 shotAnim.SetBool("Talking", true);
+             }
+             else
+                 shotAnim.SetBool("Talking", false);
 
-            if (text.ToLower().Contains("(milotalk)"))
-            {
-                text = text.Remove(text.Length - 10);
-                miloAnim.SetBool("Talking", true);
-            }
-            else
-                miloAnim.SetBool("Talking", false);
+             if (text.ToLower().Contains("(milotalk)"))
+             {
+                 text = text.Remove(text.Length - 10);
+                 miloAnim.SetBool("Talking", true);
+             }
+             else
+                 miloAnim.SetBool("Talking", false);
 
-            //sets the text of the variable called text to be equal to the local variable text (i made it confusing on purpose sorry lmao)
-            this.text.text = text;
+             //sets the text of the variable called text to be equal to the local variable text (i made it confusing on purpose sorry lmao)
+             */this.text.text = text;
         }
         else
         {
             //if the text is empty, that means the end of the dialouge file was reached, and it will turn off the dialouge box and set currentDialouge to 0
             currentDialouge = 0;
             textGO.SetActive(false);
-            backgroundGO.SetActive(false);
-            shotAnim.SetBool("Talking", false);
-            miloAnim.SetBool("Talking", false);*/
+            //backgroundGO.SetActive(false);
+            //shotAnim.SetBool("Talking", false);
+            //miloAnim.SetBool("Talking", false);
         }
+
+        }
+
     }
-}
+
+
