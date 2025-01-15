@@ -7,6 +7,9 @@ TagManager:
   - CameraSpace
   - Door
   - GhostBox
+  - Bread
+  - Salad
+  - Ham
   layers:
   - Default
   - TransparentFX
