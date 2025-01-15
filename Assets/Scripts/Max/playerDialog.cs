@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerDialog : TextHandler
+public class playerDialog : MonoBehaviour
 {
-    bool canTalk;
-    TextHandler th;
+    public bool canTalk;
+    public TextHandler th;
     int timesTalked;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class playerDialog : TextHandler
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                shotAnim.SetBool("Walking", false);
+                //shotAnim.SetBool("Walking", false);
                 //times talked is a variable to keep track of what dialouge file to load
                 timesTalked++;
                 th.InitiateTalk(timesTalked);
@@ -33,18 +33,18 @@ public class playerDialog : TextHandler
         }
         #endregion
     }
-    private void OnTriggerEnter(Collider2D other)
+    private void OnTriggerEnter(Collider Other)
     {
-        if (other.CompareTag("GhostBox"))
+        if (Other.CompareTag("GhostBox"))
         {
             //talkInstructionText.SetActive(true);
             canTalk = true;
         }
     }
 
-    private void OnTriggerExit(Collider2D other)
+    private void OnTriggerExit(Collider Other)
     {
-        if (other.CompareTag("GhostBox"))
+        if (Other.CompareTag("GhostBox"))
         {
            // talkInstructionText.SetActive(false);
             canTalk = false;
