@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77a13bcaf52f7c44e8da6c1b328b4e7e
+guid: a7e8126b9ff919c438496ebeaff14aa5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Die_0
+      name: bathroom_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2917
-        height: 2423
+        width: 1061
+        height: 1353
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f34812680c0909d47887ded3081d317c
-      internalID: 612499472
+      spriteID: e460d26637670dc41b9c513a60d6b428
+      internalID: -426470858
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Die_0: 612499472
+      bathroom_0: -426470858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
