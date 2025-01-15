@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7e8126b9ff919c438496ebeaff14aa5
+guid: 4f60bfb5cf53af5468d097a6688a90c4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,22 +123,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bathroom_0
+      name: WhatIfIKillMyself_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1061
-        height: 1353
+        x: 151
+        y: 668
+        width: 705
+        height: 599
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e460d26637670dc41b9c513a60d6b428
-      internalID: -426470858
+      spriteID: 6e195b4b5b2a7c648865089f30aaf927
+      internalID: 1173167848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhatIfIKillMyself_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 627
+        width: 59
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324c87df0842fa3449101d3751b649aa
+      internalID: 729345366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhatIfIKillMyself_4
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 533
+        width: 81
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecae54f612e7bdb47a95c4f30bc27e49
+      internalID: 1708710252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhatIfIKillMyself_5
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 202
+        width: 311
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a53828b4d6678c4b97c610cc3adc2ab
+      internalID: -1467176422
       vertices: []
       indices: 
       edges: []
@@ -154,7 +217,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bathroom_0: -426470858
+      WhatIfIKillMyself_0: 1173167848
+      WhatIfIKillMyself_1: 1897656821
+      WhatIfIKillMyself_2: -2088154928
+      WhatIfIKillMyself_3: 729345366
+      WhatIfIKillMyself_4: 1708710252
+      WhatIfIKillMyself_5: -1467176422
+      WhatIfIKillMyself_6: -268812415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
