@@ -10,6 +10,8 @@ public class Interact : MonoBehaviour
 
     bool hasItem;
 
+    bool interacting;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,11 @@ public class Interact : MonoBehaviour
     {
         Interactable.GetComponent<Interactable>().hasItem = hasItem;
 
-        
+        if (Input.GetKeyDown(KeyCode.E) && interacting == true)
+        {
+            Interacting();
+
+        }
     }
 
     private void Interacting()
@@ -31,16 +37,18 @@ public class Interact : MonoBehaviour
     }
 
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Interacting();
-
-        }
+        interacting = true;
 
     }
 
-  
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        interacting = false;
+
+    }
+
 }
