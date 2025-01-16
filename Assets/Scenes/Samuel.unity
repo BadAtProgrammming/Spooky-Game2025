@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: {fileID: 1635123129}
   objectToDestroy: {fileID: 1584411504}
+  player: {fileID: 901368262}
   hasItem: 0
 --- !u!114 &576537166
 MonoBehaviour:
@@ -638,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32a60194a9e3c947bfd45754bd1e931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 100
   timerText: {fileID: 576929962}
 --- !u!1 &1367018565
 GameObject:
