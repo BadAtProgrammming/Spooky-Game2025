@@ -8,6 +8,8 @@ public class Interactable : MonoBehaviour
     public GameObject interactable;
     public GameObject objectToDestroy;
 
+    public GameObject player;
+
     public bool hasItem;
 
 
@@ -17,16 +19,23 @@ public class Interactable : MonoBehaviour
         if (hasItem == false)
         {
             interactable.SetActive(false);
+            objectToDestroy.SetActive(true);
         }
 
         if (hasItem == true)
         {
             interactable.SetActive(true);
-            Destroy(objectToDestroy);
+            objectToDestroy.SetActive(false);
+           
         }
 
+
        
+       
+        
     }
+
+    
 	
   
 }

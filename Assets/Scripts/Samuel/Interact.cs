@@ -28,6 +28,8 @@ public class Interact : MonoBehaviour
             Interacting();
 
         }
+
+      
     }
 
     private void Interacting()
