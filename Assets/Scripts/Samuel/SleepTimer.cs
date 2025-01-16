@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SleepTimer : MonoBehaviour
 {
@@ -19,5 +20,18 @@ public class SleepTimer : MonoBehaviour
         timer -= 1 * Time.deltaTime;
 
         timerText.text = timer + "";
+
+        if (timer <= 0)
+        {
+            GameOver();
+        }
+
+      
     }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 }
