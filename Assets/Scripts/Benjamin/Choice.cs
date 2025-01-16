@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Choice : MonoBehaviour
 {
-    // use file to disable things depending on what the player chooses to do ingame (door A disables door B. maybe play a sound?
+    int KarmaPoints;
 
-    
-    [SerializeField] GameObject SideObject;
+    // when character runs out of time check karma points and see which ending happens
 
-    private void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            SideObject.SetActive(false);
-        }
+        // put code here to check for things done during the game and add to karmapoints
+        // if karma point is too low or high enough then Ending() to respectively bad or good ending
+    }
+    void GoodEnding()
+    {
+        // send to new scene with cutscene?
     }
 
+    void BadEnding()
+    {
+        // send to new scene with cutscene
+    }
 }

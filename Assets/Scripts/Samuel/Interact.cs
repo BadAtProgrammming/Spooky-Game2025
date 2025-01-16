@@ -6,7 +6,7 @@ public class Interact : MonoBehaviour
 {
     
 
-    public GameObject Interactable;
+    GameObject Interactable;
 
     bool hasItem;
 
@@ -37,14 +37,14 @@ public class Interact : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
-
+        
         interacting = true;
 
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
 
         interacting = false;

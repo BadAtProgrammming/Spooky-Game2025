@@ -20,7 +20,7 @@ public class ThunderSound : MonoBehaviour
     {
         timer -= 1 * Time.deltaTime;
 
-        if (timer <= -0.016)
+        if (timer <= -0.007)
         {
             timer = 15;
         }
