@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Choice : MonoBehaviour
+public class Karma : MonoBehaviour
 {
     int KarmaPoints;
     [SerializeField] bool Ending;

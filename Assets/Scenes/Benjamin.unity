@@ -443,24 +443,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4179baa7b08d14c47915ccf6ddc7bc3f, type: 3}
---- !u!1 &2062579440 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2993795111463483928, guid: ea2ca4e0dbe99574eb93afe74b914149, type: 3}
-  m_PrefabInstance: {fileID: 2658651119241777415}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2062579441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062579440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b72e3447a4e98a845b2e1bbbbab5dfc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ending: 0
 --- !u!1001 &2658651119241777415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -480,10 +462,6 @@ PrefabInstance:
     - target: {fileID: 2993795111463483928, guid: ea2ca4e0dbe99574eb93afe74b914149, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
-      objectReference: {fileID: 0}
-    - target: {fileID: 5213821966591498501, guid: ea2ca4e0dbe99574eb93afe74b914149, type: 3}
-      propertyPath: controls
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5338694191420648376, guid: ea2ca4e0dbe99574eb93afe74b914149, type: 3}
       propertyPath: m_LocalPosition.x
@@ -528,10 +506,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2993795111463483928, guid: ea2ca4e0dbe99574eb93afe74b914149, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2062579441}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea2ca4e0dbe99574eb93afe74b914149, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
