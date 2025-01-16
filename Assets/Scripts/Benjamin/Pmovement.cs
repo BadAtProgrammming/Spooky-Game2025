@@ -9,6 +9,8 @@ public class Pmovement : MonoBehaviour
     Framework fw;
 
     public GameObject walking;
+    [SerializeField] SpriteRenderer PlayerSprite;
+    float SpriteRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -42,12 +44,22 @@ public class Pmovement : MonoBehaviour
             fw.speed += fw.acceleration * Time.deltaTime;
         }
 
+        RotateSprite();
+
     }
 
     private void FixedUpdate()
     {
-        Debug.Log(_input.PlayerGameplay.Move.ReadValue<Vector2>());
+        Debug.Log(fw.rb.velocity);
         fw.rb.velocity = _input.PlayerGameplay.Move.ReadValue<Vector2>() * fw.speed * Time.deltaTime;
+    }
+
+    private void RotateSprite() // this is pure horror of code, do not look beyond this point - benjamin
+    {
+        if(fw.rb.velocity.x > 0)
+        {
+            PlayerSprite.flipX = true;
+        }
     }
 
 }
