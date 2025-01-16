@@ -159,7 +159,7 @@ public class TextHandler : MonoBehaviour
         else
         {
             //if the text is empty, that means the end of the dialouge file was reached, and it will turn off the dialouge box and set currentDialouge to 0
-            currentDialouge = 0;
+            //currentDialouge = 0;
             textGO.SetActive(false);
             //backgroundGO.SetActive(false);
             //shotAnim.SetBool("Talking", false);
