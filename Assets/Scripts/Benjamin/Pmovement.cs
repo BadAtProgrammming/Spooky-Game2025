@@ -7,6 +7,9 @@ public class Pmovement : MonoBehaviour
 {
     public PlayerActions _input;
     Framework fw;
+
+    public GameObject walking;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,17 +18,21 @@ public class Pmovement : MonoBehaviour
         _input.PlayerGameplay.Enable();
         _input.PlayerGameplay.Move.performed += MovePerformed;
         _input.PlayerGameplay.Move.canceled += MoveCanceled;
+
+        walking.SetActive(false);
     }
 
     void MovePerformed(InputAction.CallbackContext context)
     {
         Debug.Log("started moving");
+        walking.SetActive(true);
     }
 
     void MoveCanceled(InputAction.CallbackContext context)
     {
         Debug.Log("stopped moving");
         fw.speed = 0;
+        walking.SetActive(false);
     }
 
     private void Update()
