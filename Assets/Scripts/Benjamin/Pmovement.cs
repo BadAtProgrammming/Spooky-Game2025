@@ -9,7 +9,7 @@ public class Pmovement : MonoBehaviour
     Framework fw;
 
     public GameObject walking;
-    [SerializeField] SpriteRenderer PlayerSprite;
+    [SerializeField] GameObject PlayerSprite;
     float SpriteRotation;
 
     // Start is called before the first frame update
@@ -56,10 +56,23 @@ public class Pmovement : MonoBehaviour
 
     private void RotateSprite() // this is pure horror of code, do not look beyond this point - benjamin
     {
-        if(fw.rb.velocity.x > 0)
+        if (fw.rb.velocity.x > 0)
         {
-            PlayerSprite.flipX = true;
+            PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
+        else if (fw.rb.velocity.x < 0)
+        {
+            PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, -90);
+        }
+        else if (fw.rb.velocity.y > 0)
+        {
+            PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+        else if (fw.rb.velocity.y < 0)
+        {
+            PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        
     }
 
 }
