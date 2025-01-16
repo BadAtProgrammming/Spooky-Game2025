@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour
     public GameObject interactable;
     public GameObject objectToDestroy;
 
-    public GameObject player;
+    
 
     public bool hasItem;
 
