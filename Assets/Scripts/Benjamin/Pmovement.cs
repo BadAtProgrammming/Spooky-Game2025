@@ -50,7 +50,6 @@ public class Pmovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(fw.rb.velocity);
         fw.rb.velocity = _input.PlayerGameplay.Move.ReadValue<Vector2>() * fw.speed * Time.deltaTime;
     }
 
