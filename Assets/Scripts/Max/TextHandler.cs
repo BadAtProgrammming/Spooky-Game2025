@@ -91,7 +91,6 @@ public class TextHandler : MonoBehaviour
         DisplayNextLine();
     }
 
-
     void DisplayNextLine()
     {
         //gets the current line to see if it has any trigger words, explained better below.
