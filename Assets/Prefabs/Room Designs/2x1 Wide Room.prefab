@@ -105,7 +105,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 1.0000002, z: 0.2}
-  m_Center: {x: -0.00000023841858, y: -0.0000076293945, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1445954437902009786
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 1445954437902009786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.8156986, z: -10}
+  m_LocalPosition: {x: 0, y: 0.8156986, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -317,7 +317,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 1.0000004, z: 0.2}
-  m_Center: {x: 0.0000038146973, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2478324310925439347
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 1.0000004, z: 0.2}
-  m_Center: {x: 0.0000019073486, y: 0.0000009536743, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5557997427041609182
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 1.0000002, z: 0.2}
-  m_Center: {x: 0.00000011920929, y: -0.0000076293945, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6416391105292026209
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +741,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 1.0000002, z: 0.2}
-  m_Center: {x: -0.00000011920929, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7798933338310439741
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784888217861279808, guid: 8a33f79ccfd26144b80cc3bd34894a78, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8784888217861279808, guid: 8a33f79ccfd26144b80cc3bd34894a78, type: 3}
       propertyPath: m_LocalRotation.w
@@ -912,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784888217861279808, guid: 8a33f79ccfd26144b80cc3bd34894a78, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8784888217861279808, guid: 8a33f79ccfd26144b80cc3bd34894a78, type: 3}
       propertyPath: m_LocalRotation.w
