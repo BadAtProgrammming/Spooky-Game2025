@@ -54,21 +54,21 @@ public class Pmovement : MonoBehaviour
         fw.rb.velocity = _input.PlayerGameplay.Move.ReadValue<Vector2>() * fw.speed * Time.deltaTime;
     }
 
-    private void RotateSprite() // this is pure horror of code, do not look beyond this point - benjamin
+    private void RotateSprite() // this is pure horror. do not look beyond this point - benjamin
     {
-        if (fw.rb.velocity.x > 0)
+        if (Input.GetKey(KeyCode.D))
         {
             PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
-        else if (fw.rb.velocity.x < 0)
+        else if (Input.GetKey(KeyCode.A))
         {
             PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
-        else if (fw.rb.velocity.y > 0)
+        else if (Input.GetKey(KeyCode.W))
         {
             PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, 180);
         }
-        else if (fw.rb.velocity.y < 0)
+        else if (Input.GetKey(KeyCode.S))
         {
             PlayerSprite.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
