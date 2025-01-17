@@ -6,10 +6,10 @@ TagManager:
   tags:
   - CameraSpace
   - Door
-  - GhostBox
-  - GhostHungry
   - GhostGuy
+  - Interactable
   - GhostHair
+  - GhostHungry
   layers:
   - Default
   - TransparentFX

@@ -5,14 +5,14 @@ using UnityEngine;
 public class FollowCamera : MonoBehaviour
 {
     [SerializeField] Camera CM;
-    Collider2D playercoll;
+    Collider playercoll;
     // Start is called before the first frame update
     void Start()
     {
-        playercoll = GetComponent<Collider2D>();
+        playercoll = GetComponent<Collider>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "CameraSpace")
         {
