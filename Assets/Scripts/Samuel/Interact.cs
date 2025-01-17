@@ -42,14 +42,18 @@ public class Interact : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         
-        interacting = true;
+            interacting = true;
+        
+       
 
     }
 
     private void OnTriggerExit(Collider collision)
     {
-
-        interacting = false;
+       
+            interacting = false;
+        
+      
 
     }
 

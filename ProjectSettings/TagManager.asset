@@ -6,16 +6,8 @@ TagManager:
   tags:
   - CameraSpace
   - Door
-  - GhostBox
-<<<<<<< HEAD
-  - GhostHungry
   - GhostGuy
-  - GhostHair
-=======
-  - Bread
-  - Salad
-  - Ham
->>>>>>> df019c0f5b68ecaee9b5e89f1afc896474b3a011
+  - Interactable
   layers:
   - Default
   - TransparentFX
