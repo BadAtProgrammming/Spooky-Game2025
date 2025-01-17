@@ -8,6 +8,8 @@ TagManager:
   - Door
   - GhostGuy
   - Interactable
+  - GhostHair
+  - GhostHungry
   layers:
   - Default
   - TransparentFX
