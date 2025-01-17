@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Door")
         {
             Door door = collision.gameObject.GetComponent<Door>();
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 print("Cum");
                 door.Open = true;
