@@ -580,6 +580,7 @@ MonoBehaviour:
   - {fileID: 2101326576}
   - {fileID: 1092962998}
   - {fileID: 1196572173}
+  newscene: Game Over
 --- !u!4 &953359243
 Transform:
   m_ObjectHideFlags: 0

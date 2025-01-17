@@ -8,6 +8,9 @@ public class Cutscene : MonoBehaviour
     [SerializeField] GameObject[] cutscenes;
     int currentcutscene;
     bool On; // is script on or off?
+    [SerializeField] string newscene;
+    [SerializeField] int endofcts;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +32,9 @@ public class Cutscene : MonoBehaviour
 
             }
 
-            if (currentcutscene >= 3) // if currentcutscene is 3 or higher go to main scene
+            if (currentcutscene >= endofcts) // if currentcutscene is 3 or higher go to main scene
             {
-                SceneManager.LoadScene("Game Over");
+                SceneManager.LoadScene(newscene);
             }
         }
 
